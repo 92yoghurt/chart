@@ -1,0 +1,15 @@
+<ng-container *ngIf="seriesChart$ | async as series">
+  <ng-container *ngIf="series.length; else noContent">
+    <div [chart]="chart.data"></div>
+
+    <div class="mt-2 d-flex justify-content-between align-items-center font-weight-bold">
+      <div>Month: {{totalValues.monthValue}}</div>
+      <button class="btn btn-success" (click)="select()" [hidden]="!selected">open</button>
+      <div>Total: {{totalValues.totalValue}}</div>
+    </div>
+  </ng-container>
+</ng-container>
+
+<ng-template #noContent>
+  <div class="alert alert-danger">Nothing to show</div>
+</ng-template>

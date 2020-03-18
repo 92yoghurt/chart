@@ -1,0 +1,16 @@
+<div class="container">
+
+  <form [formGroup]="form">
+    <div class="d-flex justify-content-between">
+      <div class="w-25">
+        <ng-select [items]="categories$ | async" formControlName="category" [clearable]="false"></ng-select>
+      </div>
+
+      <div class="w-25">
+        <ng-select [items]="companiesList$ | async" bindLabel="name" bindValue="name" formControlName="name" [clearable]="false"></ng-select>
+      </div>
+    </div>
+  </form>
+
+  <app-chart [companies]="companies$ | async" [selected]="selectedCompany"></app-chart>
+</div>

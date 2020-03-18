@@ -1,0 +1,16 @@
+{
+  "id": 0,
+  "name": "All occurrences",
+  "type": "none",
+  "revenuePerWeek": {
+    "monday": 0,
+    "tuesday": 0,
+    "wednesday": 0,
+    "thursday": 0,
+    "friday": 0,
+    "saturday": 0,
+    "sunday": 0
+  },
+  "revenue": 0,
+  "monthRevenue": 0
+}
